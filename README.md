@@ -10,7 +10,6 @@ class Mail:
 [
 
 @staticmethod
-
 def decode_raw_mes(raw_data:str)->str:
 
 @staticmethod

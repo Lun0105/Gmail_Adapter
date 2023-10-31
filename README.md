@@ -2,7 +2,7 @@
 This is a Gmail Assistant Package, which helps you fetching informations from target Gmail.
 
 **Class Mail** contains basic information of a single email  
-- Mail(self, raw_data:str)
+- [Mail(self, raw_data:str)](#Class_Mail)
   - decode_raw_mes(raw_data:str)
   - decode_mes_ele(mes:str)
   - details(self)
@@ -11,7 +11,7 @@ This is a Gmail Assistant Package, which helps you fetching informations from ta
 
 **Class Gmail** contains basic information of your email account
 
-## Class Mail:
+## Class_Mail:
 **Public:**
 - `self.message` main resources(type:email.message.Message)
 - `self.head` header

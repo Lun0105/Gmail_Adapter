@@ -1,27 +1,35 @@
 # Gmail_Adapter
 This is a Gmail Assistant Package, which helps you fetching informations from target Gmail.
 
-**Class Mail** contains basic information of a single e-mail
+**Class Mail** contains basic information of a single email
 
-**Class Gmail** contains basic information of your e-mail account
+**Class Gmail** contains basic information of your email account
 
-class Mail:
+## Class Mail:
+**Public:**
+- `self.message` main resources(type:email.message.Message)
+- `self.head` header
+- `self.sender` sender
+- `self.reciever` receiver
+- `self.date` send date
 
-[
+#### **decode_raw_mes(raw_data:str)->str:**  
+you won't be using this fuction
 
-@staticmethod
-def decode_raw_mes(raw_data:str)->str:
+#### **decode_mes_ele(mes:str)->str:**  
+you won't be using this fuction  
+[gogogo](#Gmail_Adapter)
 
-@staticmethod
+**_ _init_ _(self, raw_data:str) -> None:**  
+translate rawdata (type:RFC 2822) to readable self.message (type:email.message.Message)  
+`Args` raw data of a single e-mail  
+`return` None
 
-def decode_mes_ele(mes:str)->str:
+**details(self)->None:**  
+printing header, sender, receiver, send date  
+`Args` None  
+`return` None
 
-def __init__(self, raw_data:str) -> None:
-
-def details(self)->None:
+**def download_attachment(self, path:str, coding_style="utf-8")->None:**
     
-def download_attachment(self, path:str, coding_style="utf-8")->None:
-    
-def decode_context(self)->str:
-  
-  ]
+**def decode_context(self)->str:**

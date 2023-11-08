@@ -26,6 +26,7 @@ class Mail:
         self.elements = ['Subject', 'From', 'To', 'Date']
         self.message =  self.decode_raw_mes(raw_data)
         self.head = self.decode_mes_ele(self.message[self.elements[0]])
+        self.body = self.decode_context()
         self.sender = self.decode_mes_ele(self.message[self.elements[1]])
         self.reciever = self.decode_mes_ele(self.message[self.elements[2]])
         self.date = self.message[self.elements[3]]
@@ -60,7 +61,15 @@ class Mail:
         return 
     
     def decode_context(self)->str:
-        return None
+        body = ""
+        if self.message.is_multipart():
+            for part in self.message.walk():
+                content_type = part.get_content_type()
+                content_disposition = str(part.get("Content-Disposition"))
+                if "text/plain" in content_type and "attachment" not in content_disposition:
+                    body = part.get_payload(decode=True).decode()
+        else:body = self.message.get_payload();
+        return body
 
 class Gmail:
     def __init__(self, email_address:str, token='token.json')->None:

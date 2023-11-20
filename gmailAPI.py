@@ -26,7 +26,7 @@ class Mail:
         decoded_raw = str(mes)
         return decoded_raw  
     
-    def __init__(self, ID:str, raw_data:str) -> None:
+    def __init__(self, ID:str, raw_data:str)->None:
         self.id = ID
         self.elements = ['Subject', 'From', 'To', 'Date']
         self.message =  self.decode_raw_mes(raw_data)

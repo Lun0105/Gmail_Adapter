@@ -25,7 +25,7 @@ This is a Gmail Assistant Package, which helps you fetching informations from ta
 - `self.reciever` receiver
 - `self.date` send date
   
-**_ _init_ _(self, ID:str, raw_data:str) -> None:**  
+**_ _init_ _(self, ID:str, raw_data:str)->None:**  
 translate rawdata (type:RFC 2822) to readable self.message (type:email.message.Message)  
 `Args` Id of the mail, raw data of a single e-mail
 `return` None
@@ -45,20 +45,20 @@ download the attachment if exist
 - `self.capacity` size of fetched mails in your mailbox
 - `self.Labels` Labels in your gmail
 
-**_ _init_ _(self, ID:str, raw_data:str) -> None:**  
+**_ _init_ _(self, ID:str, raw_data:str)->None:**  
 
-**extendMailbox(self, num=1)**
+**extendMailbox(self, num=1)->None**
 
-**Print(self, amount=10)**
+**Print(self, amount=10)->None**
 
-**FindById(self, ID:str)**
+**FindById(self, ID:str)->Mail**
 
-**FindByTittle(self, tittle:str, limit=10)**
+**FindByTittle(self, tittle:str, limit=10)->Mail**
 
-**FindByKeyword(self, keyword:str, consistance=True, limit=10)**
+**FindByKeyword(self, keyword:str, consistance=True, limit=10)->List**
 
-**FindBySender(self, sender:str, limit=10)**
+**FindBySender(self, sender:str, limit=10)->List**
 
-**sortLabel(self, emailId:str, name:str, add=True)**
+**sortLabel(self, emailId:str, name:str, add=True)->None**
 
-**sent_mes(self, To:str, Subject:str, context:str, file=None)**
+**sent_mes(self, To:str, Subject:str, context:str, file=None)->None**

@@ -44,7 +44,9 @@ download the attachment if exist
 - `self.mailbox` mails included 'id', 'labelIds'
 - `self.capacity` size of fetched mails in your mailbox
 - `self.Labels` Labels in your gmail
-  
+
+**_ _init_ _(self, ID:str, raw_data:str) -> None:**  
+
 **extendMailbox(self, num=1)**
 
 **Print(self, amount=10)**

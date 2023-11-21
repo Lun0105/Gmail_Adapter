@@ -50,27 +50,42 @@ send a request to access the information of the Gmail account
 `Args` email_address=the email addresss to be accessed, token=the path to the auth token, reAuth=a bool determined if reauthorize the account  
 `return` None
 
-**extendMailbox(num=1)->None**
-the default amount of mails in initial request is 500, this function extend (500 * num) mails
-`Args` num=times 500 mails to be added
-`return` None
+**extendMailbox(num=1)->None**  
+the default amount of mails in initial request is 500, this function extend (500 * num) mails  
+`Args` num=times 500 mails to be added  
+`return` None  
 
-**Print(amount=10)->None**
-output details of mials in mailbox
-`Args` amount=amount of mails to be printed
-`return` None
+**Print(amount=10)->None**  
+output details of mials in mailbox  
+`Args` amount=amount of mails to be printed  
+`return` None  
 
-**FindById(ID:str)->Mail**
-output details of mials in mailbox
-`Args` amount=amount of mails to be printed
-`return` None
+**FindById(ID:str)->Mail**  
+output details of mials in mailbox  
+`Args` amount=amount of mails to be printed  
+`return` Mail  
 
-**FindByTittle(tittle:str, limit=10)->Mail**
+**FindByTittle(tittle:str, limit=10)->Mail**  
+find the mail with specific tittle  
+`Args` tittle=the header of the mail to be found, limit=finding the mail in this range  
+`return` Mail
 
-**FindByKeyword(keyword:str, consistance=True, limit=10)->List**
+**FindByKeyword(keyword:str, consistance=True, limit=10)->List**  
+find the mails with specific keyword in its header  
+`Args` keyword=contains in header of the mail to be found, consistance=bool determined if the keyword should be totally or partly matched, limit=finding the mails in this range  
+`return` List of Mails
 
-**FindBySender(sender:str, limit=10)->List**
+**FindBySender(sender:str, limit=10)->List**  
+find the mails with specific sender  
+`Args` sender=email address of the sender, limit=finding the mails in this range   
+`return` List of Mails
 
-**sortLabel(emailId:str, name:str, add=True)->None**
+**sortLabel(emailId:str, name:str, add=True)->None**  
+adding or removing the mail with label, new label will be constructed automatically  
+`Args` eamilid=id of the mail to be labeled, name=name of the label, add=bool to determine adding or removing  
+`return` List of Mails
 
-**sent_mes(self, To:str, Subject:str, context:str, file=None)->None**
+**sent_mes(To:str, Subject:str, context:str, file=None)->None**  
+sending message  
+`Args` To=address to deliver, Subject=header of the mail, context=content if the mail, file=attachment if needed  
+`return` List of Mails

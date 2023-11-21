@@ -1,6 +1,7 @@
 # Gmail_Adapter
-This is a Gmail Assistant Package, which helps you fetching informations from target Gmail.
-
+This is a Gmail Assistant Package, which helps you fetching informations from target Gmail.  
+**Before using this package you must follow the [instruction](https://support.google.com/a/answer/7378726?hl=zh-Hant)  
+**
 **Class Mail** contains basic information of a single email  
 - [Mail(ID:str, raw_data:str)](#Class_Mail)  
   - details()

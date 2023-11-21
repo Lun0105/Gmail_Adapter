@@ -39,7 +39,7 @@ print header, sender, receiver, send date
 
 **download_attachment(path:str, coding_style="utf-8")->None:**
 download the attachment if exist  
-`Args` path=where you save the attachment, coding_style=the way to decode the file
+`Args` path=where you save the attachment, coding_style=the way to decode the file  
 `return` None
 
 ## Class_Gmail:
